@@ -12,8 +12,6 @@ export default function Page() {
   }
 
   return <>
-    <h1>Hello World !</h1>
-
     <button style={{width:"50px", height:"50px"}}onClick={addOne}>{ count }</button>
   </>
 }
