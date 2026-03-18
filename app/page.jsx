@@ -12,6 +12,6 @@ export default function Page() {
   }
 
   return <>
-    <button style={{width:"50px", height:"50px"}}onClick={addOne}>{ count }</button>
+    <button style={{ width: "50px", height: "50px" }} onClick={addOne}>{count}</button>
   </>
 }
