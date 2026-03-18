@@ -13,7 +13,7 @@ function Map() {
   const mapContainerRef = useRef();
 
   useEffect(() => {
-    mapboxgl.accessToken = "--TODO--";
+    mapboxgl.accessToken = process.env.SUPER_SECRET_MAP_ACCESS_KEY;
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       center: [2.349014, 48.864716],
