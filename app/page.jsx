@@ -1,17 +1,28 @@
 "use client"
 
-import { useState } from 'react'
+import { MapMouseEvent } from 'mapbox-gl'
+import { useRouter } from 'next/navigation'
 
+import { PathIcon, CarIcon, TrainIcon } from '@phosphor-icons/react'
 
-export default function Page() {
+import NavBar from '@/app/ui/navbar'
 
-  const [count, setCount] = useState(0)
+import '@/app/styles/pages/landing_page.css'
 
-  function addOne() {
-    setCount(count + 1)
-  }
+export default function LandingPage() {
+  
+  const router = useRouter()
 
-  return <>
-    <button style={{ width: "50px", height: "50px" }} onClick={addOne}>{count}</button>
-  </>
+  return <main>
+    <NavBar />
+
+    <h1 id="mainTitle">GamMap</h1>
+    <h2 id="mainSubtitle">Planifiez vos trajets, voyagez en toute sérénité</h2>
+
+    <section id="travel-btns">
+      <button onClick={() => router.push("/voyager")}> <PathIcon weight="fill" /> Voyager </button>
+      <button onClick={() => router.push("/voyager/itineraire")}> <CarIcon weight="fill" /></button>
+      <button onClick={() => router.push("/voyager/train")}> <TrainIcon weight="fill" /></button>
+    </section>
+  </main>
 }

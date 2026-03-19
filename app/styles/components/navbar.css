@@ -1,0 +1,46 @@
+
+#navbar {
+    display: flex;
+    > * {
+        flex: 1; 
+    }
+
+    background-color: var(--navbar-bg);
+
+    margin: 0;
+
+    padding: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    h1 {
+        margin: 0;
+    }
+
+    .l-elements {
+        display: flex;
+
+        justify-content: left;
+    }
+
+    .r-elements {
+        display: flex;
+
+        justify-content: right;
+    }
+
+    button {
+        margin: .5em;
+        height: 2em;
+        border-radius: 1em;
+
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .icon-btn {
+        display: flex;
+        width: 2em;
+        font-size: 1.5em;
+    }
+}

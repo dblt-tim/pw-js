@@ -1,0 +1,97 @@
+
+/* "C'était long à écrire."
+ * - Tim
+ */
+
+/* Palette */
+:root {
+    /* Couleur de marque */
+    --brand-300: #E3445F;
+    --brand-400: #DE3753;
+    --brand-500: #D92B48;
+    --brand-600: #D4203E;
+    --brand-700: #CF1534;
+
+    /* Couleur neutre */
+    --neutral-100: #FFFFFF;
+    --neutral-200: #D0D6D9;
+    --neutral-300: #A6AEB2;
+    --neutral-400: #7D878C;
+    --neutral-500: #576166;
+    --neutral-600: #36444D;
+    --neutral-700: #1C2B33;
+    --neutral-800: #0A141A;
+    --neutral-900: #000000;
+    
+    /* Couleurs sémantiques */
+    /* Erreur (rouge) */
+    --error-100: #F7CAC6;
+    --error-200: #F0A39C;
+    --error-300: #E87E74;
+    --error-400: #E05B4F;
+    --error-500: #D93A2B;
+    --error-600: #B22B1E;
+    --error-700: #8C1E14;
+    --error-800: #66130B;
+    --error-900: #400A05;
+    /* Validation (vert) */
+    --valid-100: #C6F7D6;
+    --valid-200: #9CF0B8;
+    --valid-300: #74E89B;
+    --valid-400: #4FE07F;
+    --valid-500: #2BD965;
+    --valid-600: #1EB250;
+    --valid-700: #148C3C;
+    --valid-800: #0B6629;
+    --valid-900: #054019;
+    /* Avertissement (jaune) */
+    --warn-100: #F7EFC6;
+    --warn-200: #F0E29C;
+    --warn-300: #E5D273;
+    --warn-400: #E0C84F;
+    --warn-500: #D9BC2B;
+    --warn-600: #B29A1E;
+    --warn-700: #8C7814;
+    --warn-800: #66570B;
+    --warn-900: #403605;
+    /* Information (bleu) */
+    --info-100: #C6E7F7;
+    --info-200: #9CD4F0;
+    --info-300: #74C1E8;
+    --info-400: #4FB0E0;
+    --info-500: #2B9FD9;
+    --info-600: #1E81B2;
+    --info-700: #14648C;
+    --info-800: #0B4866;
+    --info-900: #052C40;
+}
+
+/* thème clair */
+:root {
+    --bg: var(--neutral-200);
+    --text: var(--neutral-900);
+
+    --navbar-bg: var(--neutral-100);
+
+    --button-bg: var(--neutral-200);
+    --button-text: var(--neutral-900);
+    --button-border: var(--neutral-300);
+
+    --text-title: var(--neutral-900);
+    --text-subtitle: var(--neutral-800);
+}
+
+/* thème sombre */
+[data-theme='dark'] {
+    --bg: var(--neutral-900);
+    --text: var(--neutral-100);
+
+    --navbar-bg: var(--neutral-800);
+
+    --button-bg: var(--neutral-700);
+    --button-text: var(--neutral-100);
+    --button-border: var(--neutral-600);
+
+    --text-title: var(--neutral-100);
+    --text-subtitle: var(--neutral-200);
+}
