@@ -5,11 +5,16 @@ import { useState, useEffect } from 'react'
 import {SunIcon, MoonStarsIcon, LaptopIcon, GithubLogoIcon } from '@phosphor-icons/react'
 
 import '@/app/styles/components/navbar.css'
+import { useRouter } from 'next/navigation'
 
 function LeftElements() {
 
+  const router = useRouter()
+
   return <section className="l-elements">
-    {/* TODO */}
+    <button className="title-btn" onClick={() => {router.push("/")}}>
+      <h1>GamMap</h1>
+    </button>
   </section>
 }
 

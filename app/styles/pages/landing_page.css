@@ -5,11 +5,13 @@
   padding: 0;
 
   margin-top: 1em;
-  font-size: 4em;
+  font-size: 6em;
   display: flex;
   width: 100%;
   justify-content: center;
   color: var(--text-title);
+
+  font-weight: 600;
 }
 
 #mainSubtitle {
@@ -19,7 +21,8 @@
   width: 100%;
   justify-content: center;
   color: var(--text-subtitle);
-  margin-bottom: 1em;
+  font-size: 3em;
+  margin-bottom: 2em;
 }
 
 #travel-btns {
@@ -27,20 +30,27 @@
   justify-content: center;
 
   button {
-    font-size: 2em;
+    font-size: 3em;
     background-color: var(--brand-300);
     border: .1em solid var(--brand-500);
     color: var(--neutral-100);
-    margin-left: .5em;
-    margin-right: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
 
-    height: 1.5em;
-    border-radius: 1em;
-    padding-left: .5em;
-    padding-right: .5em;
+    height: 2em;
+    border-radius: 1.1em;
+    padding-left: 0em;
+    padding-right: 0em;
+    min-width: 2em;
+
+    
 
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .voyager {
+    padding-left: .5em;
+    padding-right: .5em;
   }
 }

@@ -43,4 +43,13 @@
         width: 2em;
         font-size: 1.5em;
     }
+    .title-btn {
+        display: flex;
+        width: auto;
+        font-size: 1em;
+        height: 3em;
+        border-radius: 1.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
