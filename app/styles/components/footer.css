@@ -1,0 +1,33 @@
+/* =========================
+   FOOTER
+========================= */
+
+#footer {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 1em;
+
+    margin: 1em;
+    padding: 1em 1.5em;
+    border-radius: 1em;
+    background-color: var(--navbar-bg);
+    backdrop-filter: blur(12px);
+
+    box-shadow: color-mix(in srgb, var(--neutral-900) 30%, transparent) 0px 25px 50px -12px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+#footer p,
+#footer span {
+    margin: 0;
+
+    color: var(--text-color);
+    font-family: Lora;
+    font-size: 0.95rem;
+}
