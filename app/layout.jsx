@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from 'next-themes'
 import NavBar from '@/app/ui/navbar'
+import Footer from '@/app/ui/footer'
 
 import { Lora, Outfit } from 'next/font/google'
 
@@ -21,6 +22,7 @@ export default function Layout({ children }) {
       <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
         <NavBar />
         {children}
+        <Footer />
       </ThemeProvider>
     </body>
   </html>
