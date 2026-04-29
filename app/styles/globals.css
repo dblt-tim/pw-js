@@ -1,15 +1,6 @@
 
 @import './colors.css';
 
-html {
-  font-family: var(--font-google-sans-flex), sans-serif;
-  font-weight: 400;
-  font-variation-settings: "GRAD" 35;
-  font-variation-settings: "slnt" 0;
-  font-variation-settings: "wdth" 100;
-  font-variation-settings: "ROND" 50;
-}
-
 body {
   background-color: var(--bg);
   color: var(--text);

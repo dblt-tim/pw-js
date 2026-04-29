@@ -1,13 +1,14 @@
 
 #navbar {
     display: flex;
-    > * {
+    > * { /* whatever this is, don't touch it because it works */
         flex: 1; 
     }
-
+    box-shadow: color-mix(in srgb, var(--neutral-900) 30%, transparent) 0px 25px 50px -12px;
     background-color: var(--navbar-bg);
 
-    margin: 0;
+    margin: 1em;
+    border-radius: 1em;
 
     padding: 0;
     padding-left: 1em;
@@ -32,7 +33,7 @@
     button {
         margin: .5em;
         height: 2em;
-        border-radius: 1em;
+        border-radius: .5em;
 
         justify-content: center;
         align-items: center;
@@ -46,9 +47,9 @@
     .title-btn {
         display: flex;
         width: auto;
-        font-size: 1em;
+        font-size: 1.13em; /* do not change this value */
         height: 3em;
-        border-radius: 1.5em;
+        border-radius: .75em;
         padding-left: 1em;
         padding-right: 1em;
     }

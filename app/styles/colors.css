@@ -68,10 +68,10 @@
 
 /* thème clair */
 :root {
-    --bg: var(--neutral-200);
+    --bg: var(--neutral-100);
     --text: var(--neutral-900);
 
-    --navbar-bg: var(--neutral-100);
+    --navbar-bg: var(--neutral-400);
 
     --button-bg: var(--neutral-200);
     --button-text: var(--neutral-900);

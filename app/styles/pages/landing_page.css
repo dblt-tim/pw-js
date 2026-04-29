@@ -12,6 +12,8 @@
   color: var(--text-title);
 
   font-weight: 600;
+  
+  font-family: Lora;
 }
 
 #mainSubtitle {
@@ -23,11 +25,16 @@
   color: var(--text-subtitle);
   font-size: 3em;
   margin-bottom: 2em;
+  
+  font-family: Outfit;
+  font-weight: 400;
 }
 
 #travel-btns {
   display: flex;
   justify-content: center;
+  font-family: Outfit;
+  font-weight: 400;
 
   button {
     font-size: 3em;
@@ -42,8 +49,7 @@
     padding-left: 0em;
     padding-right: 0em;
     min-width: 2em;
-
-    
+    box-shadow: color-mix(in srgb, var(--neutral-900) 30%, transparent) 0px 25px 50px -12px;
 
     display: flex;
     align-items: center;
