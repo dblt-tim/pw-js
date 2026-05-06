@@ -16,12 +16,13 @@ export default function Map() {
   useEffect(() => {
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
+      style : 'mapbox://style/mapbox/street-vll',
       center: [2.348417, 47.202833], // starting position [lng, lat]. Note that lat must be set between -90 and 90
       zoom: 5.5 // starting zoom
     });
 
     return () => {
-        if (mapRef.current) {
+        if (Map.current) {
             mapRef.current.remove()
         }
     }
