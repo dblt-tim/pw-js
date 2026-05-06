@@ -23,7 +23,8 @@ function RightElements() {
   // theme switcher
   // source doc : https://github.com/pacocoursey/next-themes?tab=readme-ov-file#avoid-hydration-mismatch
   const { theme, setTheme } = useTheme()
-  const [ mounted, setMounted ] = useState(false)
+	const [mounted, setMounted] = useState(false)
+  
 
   useEffect(() => {  // useEffect only works on the client
     setMounted(true) // -> we can retrieve the client's system theme

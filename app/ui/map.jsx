@@ -2,21 +2,22 @@
 
 import { useRef, useEffect } from 'react'
 import mapboxgl from 'mapbox-gl'
-import 'mapbox-gl/dist/mapbox-gl.css';
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 import 'dotenv/config'
 
-mapboxgl.accessToken = process.env.MAPBOXGL_PUBLIC_TOKEN
+mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOXGL_PUBLIC_TOKEN
 
 export default function Map() {
+	
   const mapRef = useRef(null)
   const mapContainerRef = useRef(null)
 
   useEffect(() => {
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
-      center: [-71.06776, 42.35816], // starting position [lng, lat]. Note that lat must be set between -90 and 90
-      zoom: 9 // starting zoom
+      center: [2.348417, 47.202833], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+      zoom: 5.5 // starting zoom
     });
 
     return () => {
