@@ -20,7 +20,7 @@ export default function Map() {
     });
 
     return () => {
-        if (Map.current) {
+        if (mapRef.current) {
             mapRef.current.remove()
         }
     }
