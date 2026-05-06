@@ -12,5 +12,6 @@ button {
   background-color: var(--button-bg);
   color: var(--button-text);
   border: .1em solid var(--button-border);
+  cursor: pointer;
 }
 
