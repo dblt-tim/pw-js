@@ -16,7 +16,8 @@ export default function Map() {
   useEffect(() => {
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style : 'mapbox://style/mapbox/street-vll',
+      style : 'mapbox://styles/mapbox/dark-v11',
+      //style : 'mapbox://styles/mapbox/light-v11',
       center: [2.348417, 47.202833], // starting position [lng, lat]. Note that lat must be set between -90 and 90
       zoom: 5.5 // starting zoom
     });
