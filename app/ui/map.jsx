@@ -32,10 +32,18 @@ export default function Map({selectedStyle}) {
 
   useEffect(() => {
       if(selectedStyle && mapRef.current) {
-        if(selectedStyle == "system") {
-          mapRef.current.setStyle('mapbox://styles/mapbox/standard')
+        switch (selectedStyle) {
+          case "system" :
+            selectedStyle = "standard"
+            break
+          case "light" :
+            selectedStyle = "navigation-day-v1"
+            break
+          case "dark" :
+            selectedStyle = "navigation-night-v1"
+            break
         }
-        mapRef.current.setStyle(`mapbox://styles/mapbox/${selectedStyle}-v11`)
+        mapRef.current.setStyle(`mapbox://styles/mapbox/${selectedStyle}`)
       }
   })
 
