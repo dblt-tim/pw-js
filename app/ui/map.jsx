@@ -32,6 +32,9 @@ export default function Map({selectedStyle}) {
 
   useEffect(() => {
       if(selectedStyle && mapRef.current) {
+        if(selectedStyle == "system") {
+          mapRef.current.setStyle('mapbox://styles/mapbox/standard')
+        }
         mapRef.current.setStyle(`mapbox://styles/mapbox/${selectedStyle}-v11`)
       }
   })
