@@ -28,7 +28,7 @@ export async function GET(request) {
 
         // téléchargement dataset
         const response = await fetch(
-            "https://www.data.gouv.fr/api/1/datasets/r/b0561905-7b5e-4f38-be50-df05708acb80",
+            "https://www.data.gouv.fr/api/1/datasets/r/c465b7f9-f2d7-4e32-a575-d9d69494d112",
             {
                 cache: "no-store"
             }
