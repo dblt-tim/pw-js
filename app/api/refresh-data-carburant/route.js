@@ -41,7 +41,7 @@ export async function GET(request) {
         const data = await response.json();
 
         // chemin fichier
-        const filePath = path.join(process.cwd(), "prixCarburant", "dataset.json");
+        const filePath = path.join(process.cwd(), "prixCarburant", "dataset.geojson");
 
         // écriture JSON
         await fs.writeFile(
