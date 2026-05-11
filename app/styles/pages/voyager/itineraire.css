@@ -1,0 +1,102 @@
+html, body {
+	overflow: hidden;
+}
+
+#map {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+#search-form {
+	position: absolute;
+	z-index: 2;
+	top: 10;
+	left: 10;
+	
+	padding: 0;
+	margin: 0;
+	
+	opacity: 0.65;
+	
+	background-color: var(--map-widget-bg);
+	height: 150px;
+	width: 350px;
+	
+	input {
+  		appearance: none;
+    	border: none;
+     	outline: none;
+      	background: none;
+       	box-shadow: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 75px;
+        text-align: center;
+	}
+	
+	line-height: 0;
+	
+	border-radius: 30px;
+	border: 2px solid var(--map-widget-border);
+	
+	
+}
+
+#search-form:hover {
+		opacity: 1;
+}
+
+#home-btn {
+	position: absolute;
+	right: 150;
+	top: 10;
+	z-index: 2;
+	height: 60px;
+	width: 60px;
+	background-color: var(--map-widget-bg);
+	border: 2px solid var(--map-widget-border);
+	border-radius: 30px;
+	opacity: 0.65;
+}
+#github-repo {
+	position: absolute;
+	right: 80;
+	top: 10;
+	z-index: 2;
+	height: 60px;
+	width: 60px;
+	background-color: var(--map-widget-bg);
+	border: 2px solid var(--map-widget-border);
+	border-radius: 30px;
+	opacity: 0.65;
+}
+#theme-switcher {
+	position: absolute;
+	right: 10;
+	top: 10;
+	z-index: 2;
+	height: 60px;
+	width: 60px;
+	background-color: var(--map-widget-bg);
+	border: 2px solid var(--map-widget-border);
+	border-radius: 30px;
+	opacity: 0.65;
+}
+#home-btn:hover, #github-repo:hover, #theme-switcher:hover {
+	opacity: 1;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}

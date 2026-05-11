@@ -79,6 +79,9 @@
 
     --text-title: var(--neutral-900);
     --text-subtitle: var(--neutral-800);
+    
+    --map-widget-bg: var(--neutral-100);
+    --map-widget-border: var(--neutral-200);
 }
 
 /* thème sombre */
@@ -94,4 +97,7 @@
 
     --text-title: var(--neutral-100);
     --text-subtitle: var(--neutral-200);
+
+    --map-widget-bg: var(--neutral-900);
+    --map-widget-border: var(--neutral-800);
 }
