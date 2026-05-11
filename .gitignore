@@ -3,4 +3,4 @@ node_modules
 .env
 
 # Le fichier suivant est à mettre à jour dynamiquement en utilisant l'url /api/refresh-data-carburant ; il est donc exclu du dossier.
-dataset.geojson
+dataset.json
