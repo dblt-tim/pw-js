@@ -10,13 +10,13 @@ import dataset from '@/prixCarburant/dataset.json'
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOXGL_PUBLIC_TOKEN
 
-export default function Map({selectedStyle, selectedFuel}) {
+export default function MapFuel({selectedStyle, selectedFuel}) {
 	
   const mapRef = useRef(null)
   const mapContainerRef = useRef(null)
 
   useEffect(() => {
-    mapRef.current = new mapboxgl.Map({
+    mapRef.current = new mapboxgl.MapFuel({
       container: mapContainerRef.current,
       //style : 'mapbox://styles/mapbox/dark-v11',
       style : `mapbox://styles/mapbox/light-v11`,
