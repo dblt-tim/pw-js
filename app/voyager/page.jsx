@@ -10,6 +10,6 @@ export default function Travel() {
     const { theme, setTheme } = useTheme()
 
     return <main>
-        <MapFuel selectedStyle={theme} selectedFuel={fuelType}/>
+        <MapFuel selectedStyle={theme}/>
     </main>
 }
