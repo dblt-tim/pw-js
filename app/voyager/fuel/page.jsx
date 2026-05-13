@@ -3,7 +3,7 @@
 import '@/app/styles/pages/voyager.css'
 import '@/app/styles/pages/voyager/fuel.css'
 import { useTheme } from 'next-themes'
-import Map from '@/app/ui/map.jsx'
+import MapFuel from '@/app/ui/map_fuel'
 import { HouseIcon, GithubLogoIcon, LaptopIcon, SunHorizonIcon, MoonStarsIcon } from '@phosphor-icons/react'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
@@ -31,17 +31,17 @@ export default function Itineraire() {
 
 	return <main id="map">
 		<div id="map">
-			<Map selectedStyle={theme}/>
+			<MapFuel selectedStyle={theme} selectedFuel={fuelType}/>
 		</div>
 		
 		<form id="fuel-search">
 			<select value={fuelType} onChange={(e) => setFuelType(e.target.value)}>
-				<option>Gazole</option>
-				<option>E85</option>
-				<option>GPLc</option>
-				<option>E10</option>
-				<option>SP98</option>
-				<option>SP95</option>
+				<option value="gazole_prix">Gazole</option>
+				<option value="e85_prix">E85</option>
+				<option value="gplc_prix">GPLc</option>
+				<option value="e10_prix">E10</option>
+				<option value="sp98_prix">SP98</option>
+				<option value="sp95_prix">SP95</option>
 			</select>
 		</form>
 		
