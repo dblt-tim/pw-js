@@ -16,7 +16,7 @@ export default function MapFuel({selectedStyle, selectedFuel}) {
   const mapContainerRef = useRef(null)
 
   useEffect(() => {
-    mapRef.current = new mapboxgl.MapFuel({
+    mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       //style : 'mapbox://styles/mapbox/dark-v11',
       style : `mapbox://styles/mapbox/light-v11`,
