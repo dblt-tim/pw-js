@@ -3,13 +3,12 @@
 import '@/app/styles/pages/voyager.css'
 import '@/app/styles/pages/voyager/itineraire.css'
 import { useTheme } from 'next-themes'
-import Map from '@/app/ui/map_fuel.jsx'
+import Map from '@/app/ui/map_travel.jsx'
 import { HouseIcon, GithubLogoIcon, LaptopIcon, SunHorizonIcon, MoonStarsIcon } from '@phosphor-icons/react'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 export default function Itineraire() {
-	
 	const router = useRouter();
 
 	const { theme, setTheme } = useTheme()
