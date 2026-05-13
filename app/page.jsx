@@ -3,7 +3,7 @@
 import { MapMouseEvent } from 'mapbox-gl'
 import { useRouter } from 'next/navigation'
 
-import { PathIcon, CarIcon, TrainIcon } from '@phosphor-icons/react'
+import { PathIcon, CarIcon, GasPumpIcon } from '@phosphor-icons/react'
 
 import '@/app/styles/pages/landing_page.css'
 
@@ -20,7 +20,7 @@ export default function LandingPage() {
     <section id="travel-btns">
       <button className="voyager" onClick={() => router.push("/voyager")}> <PathIcon weight="fill" /> Voyager </button>
       <button onClick={() => router.push("/voyager/itineraire")}> <CarIcon weight="fill" /></button>
-      <button onClick={() => router.push("/voyager/train")}> <TrainIcon weight="fill" /></button>
+      <button onClick={() => router.push("/voyager/fuel")}> <GasPumpIcon weight="fill" /></button>
     </section>
   </main>
 }
