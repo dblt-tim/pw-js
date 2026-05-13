@@ -1,0 +1,42 @@
+
+@import 'itineraire.css';
+
+#fuel-search {
+	position: absolute;
+	z-index: 2;
+	top: 10;
+	left: 10;
+	
+	padding: 0;
+	margin: 0;
+	
+	opacity: 0.65;
+	
+	background-color: var(--map-widget-bg);
+	height: 50px;
+	width: 200px;
+	
+	select {
+  		appearance: none;
+    	border: none;
+     	outline: none;
+      	background: none;
+       	box-shadow: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        text-align: center;
+	}
+	
+	line-height: 0;
+	
+	border-radius: 30px;
+	border: 2px solid var(--map-widget-border);
+	
+	
+}
+
+#fuel-search:hover {
+	opacity: 1;
+}
