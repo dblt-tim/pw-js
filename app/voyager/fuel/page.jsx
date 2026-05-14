@@ -14,20 +14,20 @@ export default function Itineraire() {
 
 	const { theme, setTheme } = useTheme()
 	const [mounted, setMounted] = useState(false)
-	const [fuelType, setFuelType] = useState("gazole-prix")
+	const [fuelType, setFuelType] = useState("gazole_prix")
   
 	useEffect(() => {  // useEffect only works on the client
-    setMounted(true) // -> we can retrieve the client's system theme
-  }, [])
+    	setMounted(true) // -> we can retrieve the client's system theme
+  	}, [])
 	if (!mounted) {
-    return null // don't render on server's side
-  }
+    	return null // don't render on server's side
+  	}
 	
 	const themes = ["system", "light", "dark"]
-  const themeIndex = themes.indexOf(theme)
-  function handle_TS_Click() { // change theme state every click
-    setTheme(themes[(themeIndex + 1) % themes.length])
-  }
+  	const themeIndex = themes.indexOf(theme)
+  	function handle_TS_Click() { // change theme state every click
+    	setTheme(themes[(themeIndex + 1) % themes.length])
+  	}
 
 	return <main id="map">
 		<div id="map">
@@ -35,7 +35,7 @@ export default function Itineraire() {
 		</div>
 		
 		<form id="fuel-search">
-			<select value={fuelType} onChange={(e) => setFuelType(e.target.value)}>
+			<select value={fuelType} selected="Gazole" onChange={(e) => setFuelType(e.target.value)}>
 				<option value="gazole_prix">Gazole</option>
 				<option value="e85_prix">E85</option>
 				<option value="gplc_prix">GPLc</option>
@@ -53,9 +53,9 @@ export default function Itineraire() {
 			<GithubLogoIcon />
 		</button>
 		<button id="theme-switcher" onClick={handle_TS_Click}>
-   		{theme === "system" && <LaptopIcon weight="fill" />} 
-      {theme === "light" && <SunHorizonIcon weight="fill" />}
-      {theme === "dark" && <MoonStarsIcon weight="fill" />}
+			{theme === "system" && <LaptopIcon weight="fill" />} 
+			{theme === "light" && <SunHorizonIcon weight="fill" />}
+			{theme === "dark" && <MoonStarsIcon weight="fill" />}
 		</button>
       
   </main>

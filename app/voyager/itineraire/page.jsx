@@ -15,17 +15,17 @@ export default function Itineraire() {
 	const [mounted, setMounted] = useState(false)
   
 	useEffect(() => {  // useEffect only works on the client
-    setMounted(true) // -> we can retrieve the client's system theme
-  }, [])
+    	setMounted(true) // -> we can retrieve the client's system theme
+  	}, [])
 	if (!mounted) {
-    return null // don't render on server's side
-  }
+    	return null // don't render on server's side
+  	}
 	
 	const themes = ["system", "light", "dark"]
-  const themeIndex = themes.indexOf(theme)
-  function handle_TS_Click() { // change theme state every click
-    setTheme(themes[(themeIndex + 1) % themes.length])
-  }
+  	const themeIndex = themes.indexOf(theme)
+  	function handle_TS_Click() { // change theme state every click
+   		setTheme(themes[(themeIndex + 1) % themes.length])
+  	}
 
 	return <main id="map">
 		<div>
@@ -40,9 +40,9 @@ export default function Itineraire() {
 			<GithubLogoIcon />
 		</button>
 		<button id="theme-switcher" onClick={handle_TS_Click}>
-   		{theme === "system" && <LaptopIcon weight="fill" />} 
-      {theme === "light" && <SunHorizonIcon weight="fill" />}
-      {theme === "dark" && <MoonStarsIcon weight="fill" />}
+			{theme === "system" && <LaptopIcon weight="fill" />} 
+			{theme === "light" && <SunHorizonIcon weight="fill" />}
+			{theme === "dark" && <MoonStarsIcon weight="fill" />}
 		</button>
       
   </main>

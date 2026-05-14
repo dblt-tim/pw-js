@@ -23,15 +23,16 @@ export default function MapFuel({ selectedStyle, selectedFuel }) {
 
     mapRef.current = map
 
-    map.on("load", () => {
+    mapRef.current.on("load", () => {
+
       // Ajout de la source 
-      map.addSource("fuel", {
+      mapRef.current.addSource("fuel", {
         type: "geojson",
         data: dataset
       })
 
       // Ajout du layer
-      map.addLayer({
+      mapRef.current.addLayer({
         id: "gas-station",
         type: "circle",
         source: "fuel",
@@ -129,30 +130,35 @@ export default function MapFuel({ selectedStyle, selectedFuel }) {
 
     // Mise à jour du layer après changement de style
     mapRef.current.once("style.load", () => {
-      mapRef.current.addSource("fuel", {
-        type: "geojson",
-        data: dataset,
-      })
 
-      mapRef.current.addLayer({
-        id: "gas-station",
-        type: "circle",
-        source: "fuel",
-        filter: ['!=', ['get', selectedFuel], null],
-        paint: {
-          "circle-radius": 6,
-          "circle-color": [
-            "interpolate",
-            ["linear"],
-            ["get", selectedFuel],
-            1.5, "#2c7bb6",
-            1.7, "#abd9e9",
-            1.9, "#ffffbf",
-            2.1, "#fdae61",
-            2.3, "#d7191c"
-          ]
-        },
-      })
+      if (!mapRef.current.getSource("fuel")){ // Si la source n'existe pas
+        mapRef.current.addSource("fuel", {
+          type: "geojson",
+          data: dataset,
+        })
+      }
+
+      if (mapRef.current.getSource("fuel")){ // Si la source existe
+        mapRef.current.addLayer({
+          id: "gas-station",
+          type: "circle",
+          source: "fuel",
+          filter: ['!=', ['get', selectedFuel], null],
+          paint: {
+            "circle-radius": 6,
+            "circle-color": [
+              "interpolate",
+              ["linear"],
+              ["get", selectedFuel],
+              1.5, "#2c7bb6",
+              1.7, "#abd9e9",
+              1.9, "#ffffbf",
+              2.1, "#fdae61",
+              2.3, "#d7191c"
+            ]
+          },
+        })
+      }
     })
 
   }, [selectedStyle])
