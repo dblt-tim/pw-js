@@ -28,14 +28,9 @@ export default function Itineraire() {
   }
 
 	return <main id="map">
-		<div id="map">
+		<div>
 			<Map selectedStyle={theme}/>
 		</div>
-		
-		<form id="search-form">
-			<input type="text" name="from" placeholder="from"/> <br />
-			<input type="text" name="to" placeholder="to" />
-		</form>
 		
 		<button id="home-btn" onClick={() => {router.push("/")}}>
 			<HouseIcon />

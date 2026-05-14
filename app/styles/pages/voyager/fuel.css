@@ -2,6 +2,7 @@
 @import 'itineraire.css';
 
 #fuel-search {
+	color: var(--text);
 	position: absolute;
 	z-index: 2;
 	top: 10;

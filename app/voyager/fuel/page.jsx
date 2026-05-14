@@ -14,7 +14,7 @@ export default function Itineraire() {
 
 	const { theme, setTheme } = useTheme()
 	const [mounted, setMounted] = useState(false)
-	const [fuelType, setFuelType] = useState("")
+	const [fuelType, setFuelType] = useState("gazole-prix")
   
 	useEffect(() => {  // useEffect only works on the client
     setMounted(true) // -> we can retrieve the client's system theme
