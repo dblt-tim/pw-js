@@ -1,26 +1,13 @@
-"use client"
+import LandingPageClient from "@/app/ui/landingPageClient";
 
-import { MapMouseEvent } from 'mapbox-gl'
-import { useRouter } from 'next/navigation'
+export const metadata = {
+    title: {
+        default: "GamMap",
+        template: "%s | GamMap",
+    },
+    description: "Application de planification de trajets",
+};
 
-import { PathIcon, CarIcon, GasPumpIcon } from '@phosphor-icons/react'
-
-import '@/app/styles/pages/landing_page.css'
-
-
-export default function LandingPage() {
-  
-  const router = useRouter()
-
-  return <main>
-
-    <h1 id="mainTitle">GamMap</h1>
-    <h2 id="mainSubtitle">Planifiez vos trajets, voyagez en toute sérénité</h2>
-
-    <section id="travel-btns">
-      <button className="voyager" onClick={() => router.push("/voyager")}> <PathIcon weight="fill" /> Voyager </button>
-      <button onClick={() => router.push("/voyager/itineraire")}> <CarIcon weight="fill" /></button>
-      <button onClick={() => router.push("/voyager/fuel")}> <GasPumpIcon weight="fill" /></button>
-    </section>
-  </main>
+export default function Page() {
+    return <LandingPageClient />;
 }

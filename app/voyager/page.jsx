@@ -1,15 +1,10 @@
-"use client"
+import Travel from "@/app/ui/voyager.jsx";
 
-import '@/app/styles/pages/voyager.css'
-import { useTheme } from 'next-themes'
-import MapFuel from '@/app/ui/map_fuel.jsx'
+export const metadata = {
+    title: "Voyager | GamMap",
+    description: "Préparez vos déplacements",
+};
 
-
-export default function Travel() {
-
-    const { theme, setTheme } = useTheme()
-
-    return <main>
-        <MapFuel selectedStyle={theme}/>
-    </main>
+export default function Page() {
+    return <Travel />;
 }
