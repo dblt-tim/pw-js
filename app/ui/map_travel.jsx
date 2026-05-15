@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import dataset from '@/radars/radars.json';
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOXGL_PUBLIC_TOKEN;
 
@@ -82,7 +83,45 @@ export default function MapRoute() {
 			center: [2.3522, 48.8566],
 			zoom: 11,
 		});
+
+
+		// Layer radars
+		map.current.on("load", () => {
+
+			// Ajout de la source 
+			map.current.addSource("radars", {
+				type: "geojson",
+				data: dataset
+			})
+
+			// Ajout du layer
+			map.current.addLayer({
+				id: "speedCamera",
+				type: "circle",
+				source: "radars",
+				paint: {
+					"circle-radius": 6,
+					"circle-color": "#9b2400"
+				},
+				layout: {
+					visibility : "visible"
+				}
+			})
+		})
 	}, []);
+
+	const toggleLayer = () => {
+		const visibility = map.current.getLayoutProperty("speedCamera", "visibility")
+		const toggleButton = document.getElementById("toggle")
+
+		if (visibility === "visible") {
+			map.current.setLayoutProperty("speedCamera", "visibility", "none")
+			toggleButton.innerHTML = "Montrer les radars";
+		} else {
+			map.current.setLayoutProperty("speedCamera", "visibility", "visible")
+			toggleButton.innerHTML = "Cacher les radars";
+		}
+	}
 
 	/**
 	 * --- Debounced search ---
@@ -228,7 +267,7 @@ export default function MapRoute() {
 						value={startAddress}
 						placeholder="Adresse de départ"
 						onChange={(e) => handleStartChange(e.target.value)}
-						style={{ width: "100%", padding: 10, height: "30px", borderRadius: "15px",border: "2px solid var(--map-widget-border);" }}
+						style={{ width: "100%", padding: 10, height: "30px", borderRadius: "15px", border: "2px solid var(--map-widget-border)" }}
 					/>
 
 					{startSuggestions.length > 0 && (
@@ -252,7 +291,7 @@ export default function MapRoute() {
 						value={endAddress}
 						placeholder="Adresse d'arrivée"
 						onChange={(e) => handleEndChange(e.target.value)}
-						style={{ width: "100%", padding: 10, height: "30px", borderRadius: "15px", border: "2px solid var(--map-widget-border);", marginLeft: "15px" }}
+						style={{ width: "100%", padding: 10, height: "30px", borderRadius: "15px", border: "2px solid var(--map-widget-border)", marginLeft: "15px" }}
 					/>
 
 					{endSuggestions.length > 0 && (
@@ -271,6 +310,14 @@ export default function MapRoute() {
 					style={{ backgroundColor: "var(--bg)", color: "var(--text)", marginLeft: "30px", height: "100%", borderRadius: "15px", width: "60px", border: "2px solid var(--map-widget-border)" }}
 				>
 					Calculer
+				</button>
+
+				<button
+					onClick={toggleLayer}
+					style={{ backgroundColor: "var(--bg)", color: "var(--text)", marginLeft: "30px", height: "100%", borderRadius: "15px", width: "120px", border: "2px solid var(--map-widget-border)" }}
+					id="toggle"
+				>
+					Cacher les radars
 				</button>
 			</div>
 
