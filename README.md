@@ -32,7 +32,7 @@
 - [Overview](#-overview)
 - [Getting Started](#-getting-started)
     - [Prerequisites](#-prerequisites)
-    - [Installation](#-installation)
+    - [Installation](#%EF%B8%8F-installation)
     - [Usage](#-usage)
     - [Testing](#-testing)
 - [Features](#-features)
