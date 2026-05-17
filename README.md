@@ -4,7 +4,7 @@
 <div align="center">
 
 
-# PW-JS
+# GamMap
 
 
 <!-- BADGES -->
@@ -45,9 +45,9 @@
 
 ## ✨ Overview
 
-pw-js is a powerful developer toolset crafted to facilitate the creation of interactive, data-driven web applications focused on geospatial information. It integrates map visualization, real-time data updates, and modular data sources to deliver a seamless user experience.
+GamMap is a powerful data-driven web applications focused on geospatial information. It integrates map visualization, real-time data updates, and modular data sources to deliver a seamless user experience.
 
-**Why pw-js?**
+**Why GamMap?**
 
 - 🗺️ **Map Visualization:** Interactive maps powered by Mapbox for dynamic data display
 - 🔄 **Data Refresh:** Automated routines to keep datasets like fuel prices and radar info current
